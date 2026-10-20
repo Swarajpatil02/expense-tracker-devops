@@ -1,0 +1,51 @@
+* { box-sizing: border-box; }
+body {
+    margin: 0; background: #f3f5fb; color: #20243a;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+.container { max-width: 1050px; margin: 0 auto; padding: 36px 22px; }
+.header {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; margin-bottom: 28px;
+}
+.eyebrow { color: #6757d9; font-size: 12px; font-weight: 700; letter-spacing: 2px; }
+h1 { margin: 6px 0; font-size: clamp(30px, 5vw, 42px); }
+.subtitle, .card p { color: #777d91; }
+.status {
+    color: #16845d; background: #e0f7ed; padding: 10px 14px;
+    border-radius: 20px; font-size: 13px; white-space: nowrap;
+}
+.summary { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-bottom: 22px; }
+.card, .panel { background: white; padding: 24px; border-radius: 16px; box-shadow: 0 5px 25px #20243a0b; }
+.card h2 { margin: 8px 0 0; font-size: 30px; color: #5142c8; }
+.panel { margin-bottom: 22px; }
+.panel h2 { margin-top: 0; }
+label { display: block; margin: 14px 0 7px; font-size: 14px; font-weight: 600; }
+input, select {
+    width: 100%; padding: 12px; border: 1px solid #dce0eb;
+    border-radius: 9px; background: white; font: inherit;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+button {
+    margin-top: 18px; padding: 12px 18px; border: none; border-radius: 9px;
+    background: #6757d9; color: white; font-weight: 600; cursor: pointer;
+}
+button:hover { background: #5142c8; }
+.delete { margin: 0; padding: 8px 11px; background: #fff0f0; color: #c0394b; }
+.delete:hover { background: #fbdada; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; }
+th, td { padding: 14px 10px; border-bottom: 1px solid #edf0f6; font-size: 14px; }
+th { color: #777d91; font-size: 12px; text-transform: uppercase; }
+.tag { display: inline-block; padding: 5px 9px; background: #efedff; color: #5142c8; border-radius: 12px; }
+.empty { padding: 20px 0; color: #777d91; }
+.notice { margin-bottom: 16px; padding: 12px; border-radius: 9px; }
+.success { background: #e0f7ed; color: #16845d; }
+.error { background: #fff0f0; color: #c0394b; }
+footer { padding: 12px; color: #777d91; text-align: center; font-size: 13px; }
+@media (max-width: 650px) {
+    .header { align-items: flex-start; flex-direction: column; }
+    .summary, .form-row { grid-template-columns: 1fr; }
+    .container { padding: 22px 14px; }
+    .panel, .card { padding: 18px; }
+}
